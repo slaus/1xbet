@@ -1,0 +1,235 @@
+/*!
+ * Body content
+ */
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,700|Roboto:300,400,500&display=swap');
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+/* error if tags without attr */
+img:not([alt]),
+label:not([for]),
+input[type=submit]:not([value]) {
+  outline: 1px dotted $red;
+}
+
+/* error if first child not used  */
+ul > *:not(li),
+ol > *:not(li),
+dl > *:not(dt):not(dd) {
+  outline: 1px dotted $red;
+}
+
+input:focus, textarea, a, button {
+  outline: none !important;
+  //-webkit-appearance: none !important; //trouble with radiobutton
+}
+
+a, a:hover {
+  color: $blue;
+  transition: .3s;
+}
+
+.clearfix {
+
+  &:after,
+  &:before {
+    content: "";
+    display: table;
+    height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.wrapper {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#back-to-top {
+  color: $white;
+  width: 50px;
+  height: 50px;
+  background: $blue;
+  text-transform: uppercase;
+  position: fixed;
+  right: 30px;
+  bottom: 70px;
+  line-height: 50px;
+  font-size: 22px;
+  text-align: center;
+  cursor: pointer;
+  display: none;
+  z-index: 999;
+
+  &:hover {
+    background: $blue;
+    text-decoration: none;
+  }
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: $grey;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: $grey;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: $grey;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: $grey;
+}
+
+.scale {
+
+  &:hover {
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+}
+
+.animate {
+  transition: .3s;
+
+  &:hover {
+    transition: .3s;
+  }
+}
+
+.jcarousel-wrapper {
+  margin: 20px auto;
+  position: relative;
+}
+
+/** Carousel **/
+
+.jcarousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.jcarousel ul {
+  width: 10000em;
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.jcarousel li {
+  width: 200px;
+  float: left;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 65px;
+  padding-right: 65px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.jcarousel img.avatar {
+  display: block;
+  width: 55px;
+  height: 55px !important;
+  border-radius: 50%;
+  float: left;
+  position: absolute;
+  left: 0px;
+  top: 10px;
+}
+
+/** Carousel Controls **/
+
+.jcarousel-control-prev,
+.jcarousel-control-next {
+  position: absolute;
+  top: 50%;
+  margin-top: -55px;
+  width: 18px;
+  height: 113px;
+  text-align: center;
+  //background: #4E443C;
+  color: #fff;
+  text-decoration: none;
+  //text-shadow: 0 0 1px #000;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  //-webkit-box-shadow: 0 0 4px #F0EFE7;
+  //-moz-box-shadow: 0 0 4px #F0EFE7;
+  //box-shadow: 0 0 4px #F0EFE7;
+}
+
+.jcarousel-control-prev {
+  left: 15px;
+  background: url("../images/arrow-left.png") center center no-repeat;
+}
+
+.jcarousel-control-next {
+  right: 15px;
+  background: url("../images/arrow-right.png") center center no-repeat;
+}
+
+/** Carousel Pagination **/
+
+.jcarousel-pagination {
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  margin: 0;
+  text-align: center;
+}
+
+.jcarousel-pagination a {
+  text-decoration: none;
+  display: inline-block;
+
+  font-size: 11px;
+  height: 14px;
+  width: 14px;
+  line-height: 10px;
+
+  background: $blue;
+  color: $black;
+  border-radius: 10px;
+  text-indent: -9999px;
+
+  margin-right: 7px;
+
+
+}
+
+.jcarousel-pagination a.active {
+  background: $black;
+  color: $white;
+  opacity: 1;
+
+  -webkit-box-shadow: 0 0 2px #F0EFE7;
+  -moz-box-shadow: 0 0 2px #F0EFE7;
+  box-shadow: 0 0 2px #F0EFE7;
+}
+

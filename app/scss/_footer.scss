@@ -1,0 +1,84 @@
+/*!
+ * Footer content
+ */
+
+.footer {
+
+  & .cube-5 {
+    width: 155px;
+    height: 148px;
+    display: block;
+    position: absolute;
+    right: 0px;
+    top: -40px;
+    background: url("../images/cube-5.png") center center no-repeat;
+    background-size: contain;
+
+    @media screen and (max-width: 1199px) {
+      width: 145px;
+      height: 140px;
+    }
+  }
+
+  & .description {
+    background: url("../images/description-bg.jpg") center center no-repeat;
+    //min-height: 510px;
+    background-size: cover;
+
+    @media screen and (max-width: 575px) {
+      background-position: right center;
+    }
+
+    &-title {
+      font-size: 36px;
+      font-family: 'Roboto Slab', sans-serif;
+      font-weight: bold;
+
+      @media screen and (max-width: 1199px) {
+        font-size: 32px;
+      }
+      @media screen and (max-width: 767px) {
+        font-size: 24px;
+      }
+      @media screen and (max-width: 575px) {
+        padding-right: 80px;
+      }
+    }
+  }
+
+  & .copyright {
+    background: #000;
+    height: 70px;
+    color: $white;
+    font-size: 24px;
+
+    @media screen and (max-width: 1199px) {
+      font-size: 22px;
+    }
+    @media screen and (max-width: 991px) {
+      height: auto;
+    }
+
+    & p {
+      display: block;
+      width: 33%;
+
+      @media screen and (max-width: 991px) {
+        width: 100%;
+      }
+    }
+
+    & a {
+      color: $white;
+
+      &:hover {
+        color: $blue;
+      }
+    }
+
+    & .rights {
+      color: $grey;
+      font-size: initial;
+    }
+  }
+}

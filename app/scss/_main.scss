@@ -1,0 +1,436 @@
+/*!
+ * Main content
+ */
+
+.main {
+
+  & .video {
+    background: url("../images/video-bg.jpg") center center no-repeat;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    //height: 630px;
+
+    &-content {
+
+      & #video-placeholder {
+        width: 100%;
+      }
+
+      & .video-shadow {
+        background: url("../images/shadow.png") center -10px no-repeat;
+        background-size: contain;
+        width: 100%;
+        height: 60px;
+        position: absolute;
+        bottom: -60px;
+        left: 0;
+      }
+    }
+
+    &-block {
+
+      &-info {
+        text-align: center;
+        font-size: 24px;
+        line-height: 30px;
+
+        @media screen and (max-width: 1199px) {
+          font-size: 22px;
+        }
+        @media screen and (max-width: 991px) {
+          font-size: 20px;
+        }
+        @media screen and (max-width: 575px) {
+          font-size: 18px;
+        }
+
+        & span {
+          display: block;
+          font-size: 36px;
+          font-weight: bold;
+
+          @media screen and (max-width: 1199px) {
+            font-size: 32px;
+          }
+          @media screen and (max-width: 991px) {
+            font-size: 30px;
+          }
+          @media screen and (max-width: 575px) {
+            font-size: 24px;
+          }
+        }
+      }
+    }
+  }
+
+  & .steps {
+    //min-height: 550px;
+    background: url("../images/steps-bg.jpg") center 130px no-repeat;
+
+    @media screen and (max-width: 991px) {
+      background-position: right bottom;
+    }
+    @media screen and (max-width: 767px) {
+      background-position: 350px bottom;
+    }
+    @media screen and (max-width: 575px) {
+      background-position: 800px bottom;
+    }
+
+    &-title {
+      font-size: 36px;
+      font-family: 'Roboto Slab', sans-serif;
+
+      @media screen and (max-width: 1199px) {
+        font-size: 32px;
+      }
+      @media screen and (max-width: 767px) {
+        font-size: 24px;
+      }
+    }
+
+    &-block {
+      margin-top: 70px;
+      height: 280px;
+
+      @media screen and (max-width: 991px) {
+        height: auto;
+      }
+
+      &-info {
+        height: 100%;
+
+        &-text {
+          width: 385px;
+          height: 95px;
+          text-align: center;
+          color: $blue;
+          border: 1px solid $blue;
+          font-size: 20px;
+          font-weight: 500;
+          border-radius: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          @media screen and (max-width: 1199px) {
+            width: 330px;
+            font-size: 18px;
+          }
+          @media screen and (max-width: 767px) {
+            width: 270px;
+            font-size: 15px;
+          }
+          @media screen and (max-width: 575px) {
+            width: 300px;
+          }
+        }
+
+        &-arrow {
+          width: 99px;
+          height: 24px;
+          display: block;
+          background: url("../images/arrow-down-blue.png") center center no-repeat;
+        }
+      }
+    }
+  }
+
+  & .payment {
+    //min-height: 580px;
+    background: url("../images/payment-bg.jpg") center center no-repeat;
+    background-size: cover;
+
+    &-title {
+      font-size: 36px;
+      font-family: 'Roboto Slab', sans-serif;
+      padding-left: 10%;
+      padding-right: 10%;
+
+      @media screen and (max-width: 1199px) {
+        font-size: 32px;
+      }
+      @media screen and (max-width: 767px) {
+        font-size: 24px;
+      }
+    }
+
+    & .cube-1 {
+      width: 182px;
+      height: 181px;
+      display: block;
+      position: absolute;
+      right: -90px;
+      top: -30px;
+      background: url("../images/cube-2.png") center center no-repeat;
+      background-size: contain;
+
+      @media screen and (max-width: 1199px) {
+        width: 160px;
+        height: 160px;
+      }
+    }
+
+    &-block {
+
+      &-step {
+        min-height: 110px;
+
+        @media screen and (max-width: 1199px) {
+          min-height: 130px;
+        }
+        @media screen and (max-width: 991px) {
+          min-height: auto;
+        }
+      }
+    }
+
+    &-description {
+      padding-right: 10%;
+
+      @media screen and (max-width: 991px) {
+        padding-right: 0;
+      }
+    }
+  }
+
+  & .rate {
+    //min-height: 820px;
+    background: url("../images/rate-bg.jpg") center center no-repeat;
+    background-size: cover;
+
+    &-title {
+      font-size: 36px;
+      font-family: 'Roboto Slab', sans-serif;
+      padding-left: 20%;
+      padding-right: 20%;
+
+      @media screen and (max-width: 1199px) {
+        font-size: 32px;
+      }
+      @media screen and (max-width: 991px) {
+        padding-left: 10%;
+        padding-right: 10%;
+      }
+      @media screen and (max-width: 767px) {
+        font-size: 24px;
+      }
+    }
+
+    & .cube-2 {
+      width: 345px;
+      height: 370px;
+      display: block;
+      position: absolute;
+      left: -240px;
+      top: -130px;
+      background: url("../images/cube-2.png") center center no-repeat;
+      background-size: contain;
+
+      @media screen and (max-width: 1199px) {
+        width: 305px;
+        height: 330px;
+      }
+    }
+
+    &-block {
+
+
+      &-price {
+        background: $grey;
+        position: relative;
+        width: calc(33% - 30px);
+
+        @media screen and (max-width: 991px) {
+          width: 50%;
+        }
+        @media screen and (max-width: 767px) {
+          width: 75%;
+        }
+
+        &:hover {
+          background: $white;
+        }
+
+        &-header {
+          background: $white;
+          position: absolute;
+          left: -10px;
+          top: 0;
+          width: calc(100% + 20px);
+          height: 55px;
+          font-size: 18px;
+          font-weight: bold;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          box-shadow: 0px 0 5px 0px $black;
+          //text-decoration: underline;
+        }
+
+        &-body {
+          margin-top: 50px;
+
+          & .price {
+            font-size: 48px;
+            color: $blue;
+            font-weight: bold;
+            margin-top: -10px;
+
+            @media screen and (max-width: 1199px) {
+              font-size: 42px;
+            }
+          }
+
+          & .price-old {
+            font-size: 36px;
+            text-decoration: line-through;
+            font-weight: 300;
+
+            @media screen and (max-width: 1199px) {
+              font-size: 32px;
+            }
+          }
+
+          & span {
+
+            & strong {
+              font-size: 18px;
+              color: $blue;
+
+              @media screen and (max-width: 1199px) {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+
+        &-footer {
+
+          & .btn {
+            margin-top: 20px;
+            font-size: 18px;
+            padding: 10px auto;
+
+            @media screen and (max-width: 1199px) {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  & .games {
+
+    &-title {
+      font-size: 36px;
+      font-family: 'Roboto Slab', sans-serif;
+      padding-left: 20%;
+      padding-right: 20%;
+
+      @media screen and (max-width: 1199px) {
+        font-size: 32px;
+      }
+      @media screen and (max-width: 991px) {
+        padding-left: 0;
+        padding-right: 0;
+      }
+      @media screen and (max-width: 767px) {
+        font-size: 24px;
+      }
+    }
+
+  }
+
+  & .examples {
+    background: url("../images/examples-bg.jpg") center center no-repeat;
+    padding-bottom: 5px;
+
+    &-title {
+      font-size: 36px;
+      font-family: 'Roboto Slab', sans-serif;
+      padding-left: 20%;
+      padding-right: 20%;
+
+      @media screen and (max-width: 1199px) {
+        font-size: 32px;
+      }
+      @media screen and (max-width: 991px) {
+        padding-left: 10%;
+        padding-right: 10%;
+      }
+      @media screen and (max-width: 767px) {
+        font-size: 24px;
+      }
+    }
+
+    & .cube-3 {
+      width: 219px;
+      height: 238px;
+      display: block;
+      position: absolute;
+      right: -60px;
+      top: -50px;
+      background: url("../images/cube-3.png") center center no-repeat;
+      background-size: contain;
+
+      @media screen and (max-width: 1199px) {
+        width: 200px;
+        height: 220px;
+      }
+      @media screen and (max-width: 991px) {
+        width: 170px;
+        height: 190px;
+        right: -100px;
+      }
+    }
+  }
+
+  & .votes {
+    padding-bottom: 5px;
+
+    &-title {
+      font-size: 36px;
+      font-family: 'Roboto Slab', sans-serif;
+      padding-left: 20%;
+      padding-right: 20%;
+
+      @media screen and (max-width: 1199px) {
+        font-size: 32px;
+      }
+      @media screen and (max-width: 991px) {
+        padding-left: 10%;
+        padding-right: 10%;
+      }
+      @media screen and (max-width: 767px) {
+        font-size: 24px;
+      }
+    }
+
+    & .cube-4 {
+      width: 285px;
+      height: 260px;
+      display: block;
+      position: absolute;
+      left: -60px;
+      top: -50px;
+      background: url("../images/cube-4.png") center center no-repeat;
+      background-size: contain;
+
+      @media screen and (max-width: 1199px) {
+        width: 255px;
+        height: 230px;
+      }
+      @media screen and (max-width: 991px) {
+        width: 230px;
+        height: 200px;
+        left: -120px;
+      }
+      @media screen and (max-width: 767px) {
+        width: 210px;
+        height: 180px;
+      }
+    }
+  }
+}
