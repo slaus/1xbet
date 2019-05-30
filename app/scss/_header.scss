@@ -22,7 +22,7 @@
 
       &-item {
 
-        &.active .nav-link {
+        & .nav-link.active {
           color: $blue;
           font-weight: 500;
         }

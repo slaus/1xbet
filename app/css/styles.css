@@ -65,6 +65,9 @@ a, a:hover {
   padding: 0;
   overflow: hidden; }
 
+.webkit-fill-available {
+  height: -webkit-fill-available; }
+
 #back-to-top {
   color: #ffffff;
   width: 50px;
@@ -216,6 +219,43 @@ a, a:hover {
   opacity: 1;
   box-shadow: 0 0 2px #F0EFE7; }
 
+.text-blue {
+  color: #4b8abd; }
+
+.success-title {
+  font-size: 36px;
+  font-family: 'Roboto Slab', sans-serif;
+  padding-left: 22%;
+  padding-right: 22%; }
+  @media screen and (max-width: 1199px) {
+    .success-title {
+      font-size: 32px; } }
+  @media screen and (max-width: 767px) {
+    .success-title {
+      font-size: 24px; } }
+
+.success-block {
+  width: 100%; }
+  .success-block-description {
+    width: 100%; }
+    .success-block-description span {
+      display: inline-block;
+      width: 45%; }
+
+.success .cube-1 {
+  width: 160px;
+  height: 160px;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: url("../images/cube-2.png") center center no-repeat;
+  background-size: contain; }
+  @media screen and (max-width: 1199px) {
+    .success .cube-1 {
+      width: 120px;
+      height: 120px; } }
+
 /*!
  * Header content
  */
@@ -231,7 +271,7 @@ a, a:hover {
     text-transform: uppercase; }
     .header .navbar.bg-dark {
       background-color: #153d5e !important; }
-    .header .navbar .nav-item.active .nav-link {
+    .header .navbar .nav-item .nav-link.active {
       color: #4b8abd;
       font-weight: 500; }
     .header .navbar .nav-link {

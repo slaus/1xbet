@@ -195,12 +195,54 @@ $(function () {
         });
 
 //Match Height
-    $(function () {
-        $('.item').matchHeight({
-            byRow: true,
-            property: 'height',
-            target: null,
-            remove: false
+
+    $('.item').matchHeight({
+        byRow: true,
+        property: 'height',
+        target: null,
+        remove: false
+    });
+
+    //Change active items menu on change
+    $(document).on("scroll", onScroll);
+
+    $("nav a").click(function (e) {
+        e.preventDefault();
+
+        $(document).off("scroll");
+        $(menu_selector + " a.active").removeClass("active");
+        $(this).addClass("active");
+        var hash = $(this).attr("href");
+
+        var target = $(hash);
+
+        $("html, body").animate({
+            scrollTop: target.offset().top
+        }, 500, function () {
+            //window.location.hash = hash;
+            $(document).on("scroll", onScroll);
         });
+
     });
 });
+
+//Change active items menu on change
+var menu_selector = ".ubermenu";
+
+function onScroll() {
+    var scroll_top = $(document).scrollTop();
+    $(menu_selector + " a").each(function () {
+        var hash = $(this).attr("href");
+        // console.log(hash);
+        var target = $(hash);
+        console.log(target.position().top);
+        console.log(target.position().top + target.outerHeight());
+        if (target.position().top <= scroll_top && target.position().top + target.outerHeight() > scroll_top) {
+            $(menu_selector + " a.active").removeClass("active");
+            $(this).addClass("active");
+        } else {
+            $(this).removeClass("active");
+        }
+    });
+}
+

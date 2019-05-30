@@ -50,7 +50,7 @@
 
 <body>
 <div class="wrapper">
-    <header class="header">
+    <header class="header" id="home">
         <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
                 <a class="navbar-brand" href="/">
@@ -63,21 +63,21 @@
                 </button>
 
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Как работает</a>
+                    <ul class="nav navbar-nav navbar-right ubermenu">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#home">Как работает</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">почему зарабатывают?</a>
+                            <a class="nav-link" href="#why">почему зарабатывают?</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Тарифы</a>
+                            <a class="nav-link" href="#prices">Тарифы</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">примеры результатов</a>
+                            <a class="nav-link" href="#examples">примеры результатов</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Отзывы</a>
+                            <a class="nav-link" href="#votes">Отзывы</a>
                         </li>
                     </ul>
 
@@ -153,7 +153,7 @@
                 </div>
             </div>
         </section>
-        <section class="payment">
+        <section class="payment" id="why">
             <div class="container pt-4 pb-5 position-relative">
                 <h2 class="payment-title text-uppercase text-center font-weight-bold mb-5">
                     Почему же с помощью «DiceBot» зарабатывают?
@@ -228,7 +228,7 @@
                 <div class="cube-1"></div>
             </div>
         </section>
-        <section class="rate pt-5 pb-4">
+        <section class="rate pt-5 pb-4" id="prices">
             <div class="container position-relative">
                 <h2 class="rate-title text-uppercase text-center font-weight-bold text-white mb-5">
                     Тарифы и стоимость программы «DICEBOT 1XBET»
@@ -297,7 +297,7 @@
                 <div class="cube-2"></div>
             </div>
         </section>
-        <section class="games">
+        <section class="games" id="examples">
             <div class="container pt-5 pb-4 mb-4">
                 <h2 class="games-title text-uppercase text-center font-weight-bold mb-5">
                     Видео беспрерывной игры
@@ -352,7 +352,7 @@
                 <div class="cube-3"></div>
             </div>
         </section>
-        <section class="votes">
+        <section class="votes" id="votes">
             <div class="container pt-5 pb-4 mb-4 position-relative">
                 <h2 class="votes-title text-uppercase text-center font-weight-bold mb-5">
                     отзывы покупателей программы «DiceBot 1xBet»
@@ -417,7 +417,7 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                <h5 class="modal-title text-uppercase text-blue" id="exampleModalLongTitle">Получить доступ</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -427,9 +427,8 @@
                     asperiores assumenda harum saepe delectus quisquam aliquam ex quaerat, porro deserunt, itaque
                     recusandae accusantium quos? Molestiae, at.</p>
             </div>
-            <div class="modal-footer">
-                <!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
-                <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+            <div class="modal-footer py-3">
+                <button type="button" class="btn btn-primary">Получить доступ</button>
             </div>
         </div>
     </div>
