@@ -30,9 +30,13 @@
     }
 
     &-title {
-      font-size: 36px;
+      font-size: 34px;
       font-family: 'Roboto Slab', sans-serif;
       font-weight: bold;
+
+      & span {
+        font-size: 30px;
+      }
 
       @media screen and (max-width: 1199px) {
         font-size: 32px;

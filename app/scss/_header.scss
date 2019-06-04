@@ -58,7 +58,7 @@
     height: 100%;
 
     &-title {
-      width: 62%;
+      width: 75%;
       font-family: 'Roboto Slab', sans-serif;
       font-weight: bold;
       font-size: 36px;
@@ -75,7 +75,8 @@
     }
 
     &-description {
-      width: 62%;
+      width: 75%;
+      margin-bottom: 0;
 
       @media screen and (max-width: 991px) {
         width: 100%;
@@ -87,6 +88,7 @@
     }
 
     &-button {
+      margin-top: 10px;
       text-align: left;
 
       @media screen and (max-width: 991px) {
