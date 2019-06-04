@@ -248,6 +248,11 @@
           width: 75%;
         }
 
+        &.rate-block-price-active {
+          transform: scale(1.05);
+          background: $white;
+        }
+
         &:hover {
           background: $white;
         }

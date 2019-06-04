@@ -32,7 +32,11 @@ $(window).resize(function () {
     checkPosition();
 });
 
-function checkPosition() {
+
+
+$(function () {
+    
+    function checkPosition() {
     //функция проверки видимости элемента на jquery
     var div_position = $('#video-placeholder').offset();
     var div_top = div_position.top;
@@ -61,9 +65,8 @@ function checkPosition() {
     }
 }
 
+    
 //Carousel responsive
-$(function () {
-
     var jcarousel = $('.jcarousel'),
         games = jcarousel = $('.jcarousel.games-jcarousel'),
         votes = jcarousel = $('.jcarousel.votes-jcarousel');
@@ -206,7 +209,7 @@ $(function () {
     //Change active items menu on change
     $(document).on("scroll", onScroll);
 
-    $("nav a").click(function (e) {
+    $("a.nav-link").click(function (e) {
         e.preventDefault();
 
         $(document).off("scroll");
@@ -235,8 +238,7 @@ function onScroll() {
         var hash = $(this).attr("href");
         // console.log(hash);
         var target = $(hash);
-        console.log(target.position().top);
-        console.log(target.position().top + target.outerHeight());
+
         if (target.position().top <= scroll_top && target.position().top + target.outerHeight() > scroll_top) {
             $(menu_selector + " a.active").removeClass("active");
             $(this).addClass("active");

@@ -13,6 +13,16 @@
 
   & .navbar {
     text-transform: uppercase;
+    border-bottom: 1px solid #fff;
+
+    &-brand {
+
+      & img {
+        @media screen and (max-width: 1199px) {
+          width: 120px;
+        }
+      }
+    }
 
     &.bg-dark {
       background-color: #153d5e !important;
@@ -20,11 +30,15 @@
 
     & .nav {
 
+      @media screen and (max-width: 1199px) {
+        font-size: 14px;
+      }
+
       &-item {
 
         & .nav-link.active {
           color: $blue;
-          font-weight: 500;
+          //font-weight: 500;
         }
       }
 
