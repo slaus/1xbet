@@ -61,6 +61,16 @@
         }
       }
     }
+
+    & iframe {
+      width: 100%;
+      max-width: 784px;
+      height: 441px;
+
+      @media screen and (max-width: 767px) {
+        height: -webkit-fill-available;
+      }
+    }
   }
 
   & .steps {
@@ -346,6 +356,18 @@
       }
     }
 
+    & iframe {
+      width: 100%;
+      max-width: 784px;
+      height: 441px;
+
+      @media screen and (max-width: 991px) {
+        height: 310px;
+      }
+      @media screen and (max-width: 767px) {
+        height: 215px;
+      }
+    }
   }
 
   & .examples {

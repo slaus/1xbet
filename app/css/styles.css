@@ -385,6 +385,13 @@ a, a:hover {
       @media screen and (max-width: 575px) {
         .main .video-block-info span {
           font-size: 24px; } }
+  .main .video iframe {
+    width: 100%;
+    max-width: 784px;
+    height: 441px; }
+    @media screen and (max-width: 767px) {
+      .main .video iframe {
+        height: -webkit-fill-available; } }
 
 .main .steps {
   background: url("../images/steps-bg.jpg") center 130px no-repeat; }
@@ -606,6 +613,17 @@ a, a:hover {
   @media screen and (max-width: 767px) {
     .main .games-title {
       font-size: 24px; } }
+
+.main .games iframe {
+  width: 100%;
+  max-width: 784px;
+  height: 441px; }
+  @media screen and (max-width: 991px) {
+    .main .games iframe {
+      height: 310px; } }
+  @media screen and (max-width: 767px) {
+    .main .games iframe {
+      height: 215px; } }
 
 .main .examples {
   background: url("../images/examples-bg.jpg") center center no-repeat;

@@ -1,4 +1,5 @@
 //Scripts
+$(document).ready(function () {
 
 //Back to top button
 $(window).scroll(function () {
@@ -33,20 +34,17 @@ $(window).resize(function () {
 });
 
 
-
-$(function () {
-    
     function checkPosition() {
     //функция проверки видимости элемента на jquery
-    var div_position = $('#video-placeholder').offset();
-    var div_top = div_position.top;
-    var div_left = div_position.left;
-    var div_width = $('#video-placeholder').width();
-    var div_height = $('#video-placeholder').height();
+    var div_position = $('#video-placeholder');
+    var div_top = div_position.offsetTop;
+    var div_left = div_position.offsetLeft;
+    var div_width = div_position.offsetWidth;
+    var div_height = div_position.offsetHeight;
     var top_scroll = $(document).scrollTop();
     var left_scroll = $(document).scrollLeft();
     var screen_width = $(window).width();
-    var screen_height = $(window).height() + 600;
+    var screen_height = $(window).height() + 400;
     var see_x1 = left_scroll;
     var see_x2 = screen_width + left_scroll;
     var see_y1 = top_scroll;
@@ -55,21 +53,25 @@ $(function () {
     var div_x2 = div_left + div_height;
     var div_y1 = div_top;
     var div_y2 = div_top + div_width;
-    if (div_x1 >= see_x1 && div_x2 <= see_x2 && div_y1 >= see_y1 && div_y2 <= see_y2) {
-        //если элемент видим на экране, запускаем видео Youtube
-        player.playVideo();
-        //player.pauseVideo();
-    } else {
-        //если не видим, ставим видео на паузу
-        player.pauseVideo();
-    }
+    // if (div_x1 >= see_x1 && div_x2 <= see_x2 && div_y1 >= see_y1 && div_y2 <= see_y2) {
+    //     //если элемент видим на экране, запускаем видео Youtube
+    //     player.playVideo();
+    //     //player.pauseVideo();
+    // } else {
+    //     //если не видим, ставим видео на паузу
+    //     player.pauseVideo();
+    // }
 }
 
     
 //Carousel responsive
     var jcarousel = $('.jcarousel'),
-        games = jcarousel = $('.jcarousel.games-jcarousel'),
-        votes = jcarousel = $('.jcarousel.votes-jcarousel');
+        games = $('.jcarousel.games-jcarousel'),
+        votes = $('.jcarousel.votes-jcarousel');
+
+    jcarousel.jcarousel().jcarouselSwipe();
+    games.jcarousel().jcarouselSwipe();
+    votes.jcarousel().jcarouselSwipe();
 
     jcarousel
         .on('jcarousel:reload jcarousel:create', function () {
@@ -231,6 +233,24 @@ $(function () {
 
 //Change active items menu on change
 var menu_selector = ".ubermenu";
+
+
+$(menu_selector + " a").click(function () {
+    onClick();
+});
+
+$(document).mouseup(function(e) {
+    var navbar = $(".navbar-toggler");
+
+    if (!navbar.is(e.target) && navbar.has(e.target).length === 0) {
+        onClick();
+    }
+});
+
+function onClick() {
+    $(".navbar-toggler").addClass("collapsed");
+    $(".navbar-collapse.collapse").removeClass("show");
+}
 
 function onScroll() {
     var scroll_top = $(document).scrollTop();
