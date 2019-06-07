@@ -289,3 +289,26 @@ a, a:hover {
     }
   }
 }
+
+#image-gallery .modal-footer{
+  display: block;
+}
+
+.thumb{
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+#image-gallery .modal-body {
+  padding: 0;
+}
+
+#image-gallery #image-gallery-image {
+  padding: 0 10px;
+}
+
+@media (min-width: 992px) {
+  #image-gallery .modal-dialog.modal-lg {
+    max-width: 1000px;
+  }
+}
