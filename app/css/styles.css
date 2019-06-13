@@ -354,7 +354,14 @@ a, a:hover {
   @media screen and (max-width: 991px) {
     .btn {
       font-size: 18px;
-      max-width: 260px; } }
+      max-width: 260px; 
+    } 
+  }
+  @media screen and (max-width: 350px) {
+    .btn {
+      font-size: 14px;
+    } 
+  }
   .btn:hover {
     background: #4b8abd url("../images/button-bg-hover.jpg") center center no-repeat;
     color: #ffffff; }
@@ -614,6 +621,9 @@ a, a:hover {
       @media screen and (max-width: 1199px) {
         .main .rate-block-price-footer .btn {
           font-size: 16px; } }
+          @media screen and (max-width: 350px) {
+            .main .rate-block-price-footer .btn {
+              font-size: 10px; } }
 
 .main .games-title {
   font-size: 36px;
